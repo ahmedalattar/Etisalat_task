@@ -1,0 +1,403 @@
+/* You can add global styles to this file, and also import other style files */
+#background-identity {
+  background-color: bisque;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.img-ref {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 70px;
+  text-align: center;
+  display: block;
+  margin: auto;
+}
+
+.p-calendar .p-inputtext {
+  text-align: right !important;
+  font-weight: bold !important;
+  font-size: medium !important;
+}
+
+.monthly-rep .p-datatable-scrollable-header-box {
+  padding-right: 0 !important;
+}
+
+.p-fieldset .p-fieldset-legend {
+  font-size: 1rem !important;
+  font-weight: bold !important;
+  color: white !important;
+  background-color: rgb(67, 0, 153) !important;
+}
+
+#title {
+  font-size: 2rem !important;
+  font-weight: bold !important;
+  color: white !important;
+  background-color: rgb(67, 0, 153) !important;
+}
+
+.logged-user-menu .p-splitbutton .p-button {
+  color: #430099 !important;
+  background: #ffff;
+  border: 1px solid #430099 !important;
+}
+
+.logged-user-menu .p-splitbutton .p-button:hover {
+  color: #ffff !important;
+  background: #430099 !important;
+  border: 1px solid #430099 !important;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+
+  font-size: 20px;
+  padding: 5px;
+  z-index: 100;
+}
+
+::placeholder {
+  text-align: right;
+}
+
+/* or, for legacy browsers */
+
+::-webkit-input-placeholder {
+  text-align: right;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  text-align: right;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  text-align: right;
+}
+
+:-ms-input-placeholder {
+  text-align: right;
+}
+::placeholder {
+  text-align: right;
+}
+
+/* or, for legacy browsers */
+
+::-webkit-input-placeholder {
+  text-align: right;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  text-align: right;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  text-align: right;
+}
+
+:-ms-input-placeholder {
+  text-align: right;
+}
+::placeholder {
+  text-align: right;
+}
+
+/* or, for legacy browsers */
+
+::-webkit-input-placeholder {
+  text-align: right;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  text-align: right;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  text-align: right;
+}
+
+:-ms-input-placeholder {
+  text-align: right;
+}
+::placeholder {
+  text-align: right;
+}
+
+/* or, for legacy browsers */
+
+::-webkit-input-placeholder {
+  text-align: right;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  text-align: right;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  text-align: right;
+}
+
+:-ms-input-placeholder {
+  text-align: right;
+}
+::placeholder {
+  text-align: right;
+}
+
+/* or, for legacy browsers */
+
+::-webkit-input-placeholder {
+  text-align: right;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  text-align: right;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  text-align: right;
+}
+
+:-ms-input-placeholder {
+  text-align: right;
+}
+::placeholder {
+  text-align: right;
+}
+
+/* or, for legacy browsers */
+
+::-webkit-input-placeholder {
+  text-align: right;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  text-align: right;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  text-align: right;
+}
+
+:-ms-input-placeholder {
+  text-align: right;
+}
+::placeholder {
+  text-align: right;
+}
+
+/* or, for legacy browsers */
+
+::-webkit-input-placeholder {
+  text-align: right;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  text-align: right;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  text-align: right;
+}
+
+:-ms-input-placeholder {
+  text-align: right;
+}
+::placeholder {
+  text-align: right;
+}
+
+/* or, for legacy browsers */
+
+::-webkit-input-placeholder {
+  text-align: right;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  text-align: right;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  text-align: right;
+}
+
+:-ms-input-placeholder {
+  text-align: right;
+}
+::placeholder {
+  text-align: right;
+}
+
+/* or, for legacy browsers */
+
+::-webkit-input-placeholder {
+  text-align: right;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  text-align: right;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  text-align: right;
+}
+
+:-ms-input-placeholder {
+  text-align: right;
+}
+::placeholder {
+  text-align: right;
+}
+
+/* or, for legacy browsers */
+
+::-webkit-input-placeholder {
+  text-align: right;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  text-align: right;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  text-align: right;
+}
+
+:-ms-input-placeholder {
+  text-align: right;
+}
+::placeholder {
+  text-align: right;
+}
+
+/* or, for legacy browsers */
+
+::-webkit-input-placeholder {
+  text-align: right;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  text-align: right;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  text-align: right;
+}
+
+:-ms-input-placeholder {
+  text-align: right;
+}
+::placeholder {
+  text-align: right;
+}
+
+/* or, for legacy browsers */
+
+::-webkit-input-placeholder {
+  text-align: right;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  text-align: right;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  text-align: right;
+}
+
+:-ms-input-placeholder {
+  text-align: right;
+}
+
+.disable-with-loading{
+  pointer-events: none;
+}
+
+label {
+  color: rgb(67, 0, 153);
+  font-weight: bold;
+  margin-bottom: 4px;
+  font-size: larger;
+}
+
+.btn-success {
+  height: 50px;
+  cursor: pointer;
+  color: white;
+  vertical-align: middle;
+  border-width: small;
+  border-radius: 12px;
+  transition: all .1s;
+  font-size: larger;
+  font-weight: bold;
+  background-color: rgb(67, 0, 153);
+  border-color: rgb(67, 0, 153);
+}
+
+.btn-warning {
+  height: 50px;
+  cursor: pointer;
+  color: white;
+  vertical-align: middle;
+  border-width: small;
+  border-radius: 12px;
+  transition: all .1s;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.btn-success:disabled {
+  background-color: rgb(67, 0, 153) !important;
+  color: white !important;
+  border-width: small !important;
+  border-radius: 12px !important;
+  border-color: rgb(67, 0, 153) !important;
+}
+
+.btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open>.dropdown-toggle.btn-primary {
+  background-color: white;
+  color: rgb(67, 0, 153) !important;
+  border-width: small !important;
+  border-radius: 12px !important;
+  border-color: rgb(67, 0, 153) !important;
+
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.btn:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+tr {
+  text-align: center !important;
+  font-weight: bold !important;
+  font-size: large !important;
+}
+
+th {
+  text-align: center !important;
+  font-weight: bold !important;
+  font-size: large !important;
+}
+
+input {
+  text-align: right !important;
+  font-size: large;
+  font-weight: bold;
+}

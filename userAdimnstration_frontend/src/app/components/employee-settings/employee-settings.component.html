@@ -1,0 +1,126 @@
+<div class="content">
+  <p-fieldset class="fieldset" legend="الموظفين ">
+    <div class="row col-12" style="text-align: right;" align="right">
+      <div class="form-group col-md-3">
+        <label style="display: block;">تاريخ التوظيف </label>
+        <p-calendar name="toBatch" [showIcon]="true" [style]="{ 'width': '100%', 'font-weight': 'bold'}"
+                    [(ngModel)]="employee.hireDate" dataType="string"
+                    [monthNavigator]="true" [yearNavigator]="true" yearRange="2020:2030" dateFormat="yy-mm-dd"
+                    placeholder="yyyy-mm-dd"></p-calendar>
+      </div>
+
+      <div class="form-group col-md-3">
+        <label>رقم التليفون</label>
+        <input type="text" [(ngModel)]="employee.phone_number" pInputText class="form-control" name="ownerNa"
+               placeholder="رقم التليفون"/>
+      </div>
+
+      <div class="form-group col-md-3">
+        <label>اسم الاخير</label>
+        <input type="text" [(ngModel)]="employee.lastName" pInputText class="form-control" name="ownerNa"
+               placeholder="اسم الاخير"/>
+      </div>
+
+      <div class="form-group col-md-3">
+        <label>اسم الاول</label>
+        <input type="text" [(ngModel)]="employee.firstName" pInputText class="form-control" name="ownerN"
+               placeholder="اسم الاول"/>
+      </div>
+    </div>
+    <div class="row col-12" style="text-align: right;" align="right">
+      <div class="form-group col-md-3" style="text-align: right;">
+        <label>الادارة</label>
+        <p-dropdown [(ngModel)]="employee.departmentId" name="departmentName" optionLabel="departmentName" [options]="departmentsList"
+                    placeholder="الادارة" [showClear]="true"
+                    [style]="{ 'width': '100%', 'font-weight': 'bold', 'font-size': 'medium'}"></p-dropdown>
+      </div>
+
+      <div class="form-group col-md-3" style="text-align: right;">
+        <label>المدير</label>
+        <p-dropdown [(ngModel)]="employee.managerId" name="firstName" optionLabel="firstName"  [options]="employeeList"
+                    placeholder="المدير" [showClear]="true"
+                    [style]="{ 'width': '100%', 'font-weight': 'bold', 'font-size': 'medium'}"></p-dropdown>
+      </div>
+
+
+      <div class="form-group col-md-3">
+        <label>المرتب</label>
+        <input type="number" [(ngModel)]="employee.salary" pInputText class="form-control" name="ownerNa"
+               placeholder="اسم الاخير"/>
+      </div>
+
+      <div class="form-group col-md-3">
+        <label>الايميل</label>
+        <input type="text" [(ngModel)]="employee.email" pInputText class="form-control" name="ownerN"
+               placeholder="الايميل"/>
+      </div>
+    </div>
+    <div class="form-group text-center mt-3">
+      <button type="submit" class="btn btn-success btn-lg"
+              style="margin-left: 5px !important; margin-bottom: 10px; width: 20%;" (click)="add()"
+              [disabled]="!employee.firstName || !employee.lastName"
+              (keyup.enter)="add()">{{updateMode ? 'تعديل' : 'اضافة'}}
+      </button>
+    </div>
+
+  </p-fieldset>
+
+  <div class="card mt-2 mb-5"
+       style="text-align: center; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;">
+
+    <div class="justify-content-center">
+      <div class="col-auto mb-4">
+        <p-table [lazyLoadOnInit]="false" styleClass="p-datatable-gridlines"
+                 [lazy]="true" [value]="searchResults.content" [paginator]="true"
+                 [totalRecords]="searchResults.totalElements" [rows]="pageSize"
+                 (onLazyLoad)="paginate($event)" [loading]="loadingTable"
+                 [showCurrentPageReport]="true" [(first)]="first"
+                 [rowsPerPageOptions]="[10,30,50]" [responsive]="true" paginatorPosition="top">
+          <ng-template pTemplate="header">
+            <tr>
+              <th>حذف</th>
+              <th>تعديل</th>
+              <th>تاريخ التوظيف</th>
+              <th>المرتب</th>
+              <th>رقم التليفون</th>
+              <th>الاسم الاخير</th>
+              <th>اسم الاول</th>
+              <th>#</th>
+            </tr>
+          </ng-template>
+
+          <ng-template pTemplate="body" let-item let-rowIndex="rowIndex">
+            <tr>
+              <td style="text-align: center !important;">
+                <button type="submit" class="btn btn-danger btn-lg"
+                        (click)="delete.show()"
+                >حذف
+                </button>
+                <swal #delete title="" text="هل أنت متأكد من حذف هذا العنصر ؟" type="warning"
+                      [showConfirmButton]="true" confirmButtonColor="#1ab394" cancelButtonColor="#ED5565"
+                      [showCancelButton]="true"
+                      customClass="allow-swal" confirmButtonText="نعم متأكد"
+                      cancelButtonText="إلغاء " [focusCancel]="true"
+                      (confirm)="deleteItem(item)">
+                </swal>
+              </td>
+              <td style="text-align: center !important;">
+                <button type="submit" class="btn btn-success btn-lg"
+                        (click)="edit(item)"
+                >تعديل
+                </button>
+              </td>
+              <td style="text-align: center !important;">{{ item?.hireDate | date:'dd/MM/yyyy'}}</td>
+              <td style="text-align: center !important;">{{ item?.salary }}</td>
+              <td style="text-align: center !important;">{{ item?.phone_number }}</td>
+              <td style="text-align: center !important;">{{ item?.lastName }}</td>
+              <td style="text-align: center !important;">{{ item?.firstName}}</td>
+              <td style="text-align: center !important;">{{ rowIndex + 1 }}</td>
+            </tr>
+          </ng-template>
+        </p-table>
+      </div>
+    </div>
+  </div>
+
+</div>

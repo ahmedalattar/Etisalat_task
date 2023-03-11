@@ -1,0 +1,80 @@
+<div class="content">
+  <p-fieldset class="fieldset" legend="الادارة ">
+    <div class="row col-12" style="text-align: right;" align="right">
+
+      <div class="form-group col-md-6" style="text-align: right;">
+        <label>المدير</label>
+        <p-dropdown [(ngModel)]="department.managerId" name="firstName" optionLabel="firstName"  [options]="employeeList"
+                    placeholder="المدير" [showClear]="true"
+                    [style]="{ 'width': '100%', 'font-weight': 'bold', 'font-size': 'medium'}"></p-dropdown>
+      </div>
+
+      <div class="form-group col-md-6">
+        <label>اسم الادارة</label>
+        <input type="text" [(ngModel)]="department.departmentName" pInputText class="form-control" name="ownerN"
+               placeholder="اسم الادارة"/>
+      </div>
+    </div>
+    <div class="form-group text-center mt-3">
+      <button type="submit" class="btn btn-success btn-lg"
+              style="margin-left: 5px !important; margin-bottom: 10px; width: 20%;" (click)="add()"
+              [disabled]="!department.departmentName || !department.managerId"
+              (keyup.enter)="add()">{{updateMode ? 'تعديل' : 'اضافة'}}
+      </button>
+    </div>
+
+  </p-fieldset>
+
+  <div class="card mt-2 mb-5"
+       style="text-align: center; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;">
+
+    <div class="justify-content-center">
+      <div class="col-auto mb-4">
+        <p-table [lazyLoadOnInit]="false" styleClass="p-datatable-gridlines"
+                 [lazy]="true" [value]="searchResults.content" [paginator]="true"
+                 [totalRecords]="searchResults.totalElements" [rows]="pageSize"
+                 (onLazyLoad)="paginate($event)" [loading]="loadingTable"
+                 [showCurrentPageReport]="true" [(first)]="first"
+                 [rowsPerPageOptions]="[10,30,50]" [responsive]="true" paginatorPosition="top">
+          <ng-template pTemplate="header">
+            <tr>
+              <th>حذف</th>
+              <th>تعديل</th>
+              <th>الاسم المدير</th>
+              <th>اسم الادارة</th>
+              <th>#</th>
+            </tr>
+          </ng-template>
+
+          <ng-template pTemplate="body" let-item let-rowIndex="rowIndex">
+            <tr>
+              <td style="text-align: center !important;">
+                <button type="submit" class="btn btn-danger btn-lg"
+                        (click)="delete.show()"
+                >حذف
+                </button>
+                <swal #delete title="" text="هل أنت متأكد من حذف هذا العنصر ؟" type="warning"
+                      [showConfirmButton]="true" confirmButtonColor="#1ab394" cancelButtonColor="#ED5565"
+                      [showCancelButton]="true"
+                      customClass="allow-swal" confirmButtonText="نعم متأكد"
+                      cancelButtonText="إلغاء " [focusCancel]="true"
+                      (confirm)="deleteItem(item)">
+                </swal>
+              </td>
+              <td style="text-align: center !important;">
+                <button type="submit" class="btn btn-success btn-lg"
+                        (click)="edit(item)"
+                >تعديل
+                </button>
+              </td>
+              <td style="text-align: center !important;">{{ item?.managerId?.firstName }}</td>
+              <td style="text-align: center !important;">{{ item?.departmentName}}</td>
+              <td style="text-align: center !important;">{{ rowIndex + 1 }}</td>
+            </tr>
+          </ng-template>
+        </p-table>
+      </div>
+    </div>
+  </div>
+
+</div>
